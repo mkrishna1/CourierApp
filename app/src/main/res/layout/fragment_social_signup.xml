@@ -17,15 +17,14 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="@dimen/five_dp"
             android:background="@drawable/rectangel_white"
+            android:drawableStart="@drawable/ic_google"
             android:fontFamily="sans-serif-condensed"
             android:gravity="center"
             android:padding="@dimen/ten_dp"
-            android:layout_marginLeft="@dimen/ten_dp"
-            android:layout_marginRight="@dimen/ten_dp"
+            android:layout_marginLeft="@dimen/seventy_dp"
+            android:layout_marginRight="@dimen/seventy_dp"
             android:textColor="@color/red"
-            android:text="@string/continue_Gmail"
-
-            />
+            android:text="@string/continue_Gmail"/>
 
         <TextView
             android:id="@+id/othersignin"
@@ -44,7 +43,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="3dp"
+            android:layout_height="2dp"
             android:layout_above="@id/gmailSignup"
             android:layout_marginBottom="@dimen/thiteen_dp"
             android:layout_toLeftOf="@id/othersignin"
@@ -52,11 +51,11 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="3dp"
+            android:layout_height="2dp"
             android:layout_above="@id/gmailSignup"
             android:layout_marginBottom="@dimen/thiteen_dp"
             android:layout_toRightOf="@id/othersignin"
-            android:background="@color/black" />
+            android:background="@color/sun_atlantic_color" />
 
     </RelativeLayout>
 

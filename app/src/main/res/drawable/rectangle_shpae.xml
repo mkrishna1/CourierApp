@@ -6,6 +6,6 @@
         android:angle="90"
         android:endColor="@color/sun_atlantic_color"
         android:startColor="@color/sun_atlantic_color" />
-    <corners android:radius="30dp" />
+    <corners android:radius="10dp" />
 
 </shape>

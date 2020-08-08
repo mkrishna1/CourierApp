@@ -48,7 +48,7 @@
     <!--Forget Password Activity-->
 
     <string name="forgetPasswordLarge">Forgot Your Password?</string>
-    <string name="forget_text">To receover your password, you need to enter your register mobile number, we will send you OTP and you can reset your password</string>
+    <string name="forget_text">To receover your password, you need to enter your registered mobile number, we will send you OTP and you can reset your password</string>
     <string name="mobile">Mobile Number</string>
 
 

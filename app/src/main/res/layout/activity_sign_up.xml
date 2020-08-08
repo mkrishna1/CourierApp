@@ -38,7 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
-                    android:gravity="center"
+                    android:gravity="start"
                     android:hint="Name"
                     android:maxLength="25"
                     android:textSize="@dimen/fiften_sp"
@@ -134,7 +134,9 @@
                 android:enabled="false"
                 android:fontFamily="sans-serif-condensed"
                 android:text="Sign Up"
-                android:textColorHint="@color/sun_atlantic_color" />
+                android:background="@drawable/rectangle_shpae"
+                android:textSize="@dimen/twenty_dp"
+                android:textColor="@color/white"/>
 
             <!-- <TextView
                  android:id="@+id/login"

@@ -3,12 +3,14 @@ package com.example.courierapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -37,7 +39,7 @@ public class MobileAuthActivity extends AppCompatActivity {
     private Button sendButton;
 //    private Button resendButton;
 
-    private RelativeLayout generateOtpLayout, receiveOtpLayout;
+    private LinearLayout generateOtpLayout, receiveOtpLayout;
 
     String phoneNumber;
 
@@ -49,6 +51,7 @@ public class MobileAuthActivity extends AppCompatActivity {
     private FirebaseAuth fbAuth;
     CountryCodePicker ccp;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,9 +63,8 @@ public class MobileAuthActivity extends AppCompatActivity {
         codeText = (EditText) findViewById(R.id.pinView);
         verifyButton = (Button) findViewById(R.id.verifyOtpBtn);
         sendButton = (Button) findViewById(R.id.generateOtpBtn);
-//        resendButton = (Button) findViewById(R.id.resendOtpBtn);
-        generateOtpLayout = (RelativeLayout) findViewById(R.id.phoneAuth);
-        receiveOtpLayout = (RelativeLayout) findViewById(R.id.receiveOTP);
+        generateOtpLayout =  (LinearLayout) findViewById(R.id.phoneAuth);
+        receiveOtpLayout = (LinearLayout) findViewById(R.id.receiveOTP);
 
 
         ccp = (CountryCodePicker) findViewById(R.id.ccp);

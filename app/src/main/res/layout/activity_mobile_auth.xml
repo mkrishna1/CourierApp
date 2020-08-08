@@ -8,20 +8,58 @@
     android:background="@color/greyLight">
 
     <!--  Step1: Generate OTP  -->
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/phoneAuth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:padding="8dp"
-        android:visibility="visible">
+        android:visibility="visible"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/send_otp_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/send_otp_img"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OTP Verification"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We will send you an One Time Password on this mobile number"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/send_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
+            android:layout_marginTop="25dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp">
 
@@ -55,35 +93,45 @@
 
         <Button
             android:id="@+id/generateOtpBtn"
+            android:layout_below="@+id/send_otp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Generate OTP"
-            android:background="@drawable/signup_btn"
+            android:background="@drawable/rectangle_shpae"
             android:textColor="@color/white"
             android:layout_marginStart="70dp"
             android:layout_marginEnd="70dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:textSize="19dp"
             android:textAllCaps="false"/>
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <!--  Step2: Receive OTP  -->
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/receiveOTP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
+        android:orientation="vertical"
         android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/receive_otp_img"
+            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/textView_otp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="18dp"
             android:layout_marginBottom="8dp"
             android:text="Enter the 6 digit OTP"
             android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="20dp"
             android:textStyle="bold"/>
 
         <com.chaos.view.PinView
@@ -96,6 +144,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
             android:inputType="number"
             android:padding="10dp"
             android:textSize="18sp"
@@ -105,16 +154,35 @@
             app:lineColor="@android:color/darker_gray"
             app:viewType="rectangle"/>
 
-        <TextView
-            android:id="@+id/resendOTP"
-            android:layout_below="@id/pinView"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
-            android:text="Didn't get the OTP! Resend it."
-            android:visibility="visible"/>
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/resendOTP_txt"
+                android:layout_below="@id/pinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Didn't get the OTP? "
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/resendOTP"
+                android:layout_below="@id/pinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/red"
+                android:text="RESEND OTP"
+                android:textStyle="bold"
+                android:visibility="visible"/>
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/verifyOtpBtn"
@@ -122,16 +190,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Validate OTP"
-            android:background="@drawable/signup_btn"
+            android:background="@drawable/rectangle_shpae"
             android:textColor="@color/white"
             android:layout_marginStart="70dp"
             android:layout_marginEnd="70dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:textSize="19dp"
             android:textAllCaps="false"
             android:visibility="visible"/>
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
 </RelativeLayout>
